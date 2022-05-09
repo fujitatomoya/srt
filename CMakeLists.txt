@@ -1271,6 +1271,12 @@ if (ENABLE_BONDING)
 	srt_add_example(test-c-server-bonding.c)
 endif()
 
+if (ENABLE_ENCRYPTION)
+	srt_add_example(test-c-client-encryption.c)
+
+	srt_add_example(test-c-server-encryption.c)
+endif()
+
 	srt_add_example(testcapi-connect.c)
 endif()
 
