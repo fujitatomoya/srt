@@ -75,6 +75,11 @@ int main(int argc, char** argv)
     printf("srt accept\n");
     int addr_size = sizeof their_addr;
     int their_fd = srt_accept(ss, (struct sockaddr *)&their_addr, &addr_size);
+    if (their_fd == -1)
+    {
+        fprintf(stderr, "srt_accept: %s\n", srt_getlasterror_str());
+        return 1;
+    }
 
     int i;
     for (i = 0; i < 100; i++)

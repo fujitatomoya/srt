@@ -83,7 +83,7 @@ int main(int argc, char** argv)
             return 1;
         }
 
-        usleep(1000);   // 1 ms
+        usleep(10000);  // 10 ms
     }
 
 
